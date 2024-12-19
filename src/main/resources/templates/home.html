@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Office Equipment Management</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <style>        
+        .container {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            padding: 50px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .text-content {
+            flex: 1; 
+            text-align: left;
+        }
+        .navigation {
+            flex: 0.5;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .button {
+            text-decoration: none;
+            display: inline-block;
+            background: linear-gradient(135deg, #2c82c9, #3498db);
+            color: #fff;
+            padding: 15px 40px;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 700;
+            text-align: center;
+            transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        .button:hover {
+            background: #fff;
+            color: #3498db;
+            border-color: #3498db;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="text-content">
+            <h1>Welcome to Office Equipment System</h1>
+            <h2>Easily Manage Cities, Shops, and Products</h2>
+        </div>
+        
+        <div class="navigation">
+            <a th:href="@{/cities}" class="button">Cities</a>
+            <a th:href="@{/shops}" class="button">Shops</a>
+            <a th:href="@{/products}" class="button">Products</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!--
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Shops</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+    <div class="container">
+        <h1>Shops</h1>
+        <a href="/shops/add" class="button">Add Shop</a>
+				<div th:if="${warning}" class="warning">
+					<p th:text="${warning}"></p>
+			</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Shop Name</th>
+                    <th>City</th>
+                    <th>Address</th>
+                    <th>Opening Year</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="shop : ${shops}">
+                    <td th:text="${shop.id}"></td>
+                    <td th:text="${shop.shopName}"></td>
+                    <td th:text="${shop.city.cityName}"></td>
+                    <td th:text="${shop.address}"></td>
+                    <td th:text="${shop.openingYear}"></td>
+                    <td class="actions">
+                        <a th:href="@{/shops/edit/{id}(id=${shop.id})}" class="button edit">Edit</a>
+                        <a th:href="@{/shops/delete/{id}(id=${shop.id})}" class="button delete">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="/home" class="button back">Back to Home</a>
+    </div>
+</body>
+</html>
+
+-->
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Shops</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+    <div class="container">
+        <h1>Shops</h1>
+
+        <form action="/shops/execute-query" method="post" class="form-container">
+            <label for="sqlQuery">Enter SQL Query:</label>
+            <input type="text" id="sqlQuery" name="sqlQuery" placeholder="Enter SQL Query" required>
+            <button type="submit">Execute Query</button>
+        </form>
+
+        <div th:if="${queryResult != null && !queryResult.isEmpty()}">
+            <h2>Query Result:</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th th:each="column : ${queryResult[0].keySet()}" th:text="${column}"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="row : ${queryResult}">
+                        <td th:each="cell : ${row.values()}" th:text="${cell}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div th:if="${queryResult == null || queryResult.isEmpty()}">
+            <p>No results to display. Please enter a valid SQL query.</p>
+        </div>
+
+        <div th:if="${message}">
+            <p th:text="${message}"></p>
+        </div>
+        <div th:if="${errorMessage}">
+            <p style="color:red;" th:text="${errorMessage}"></p>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Shop Name</th>
+                    <th>City</th>
+                    <th>Address</th>
+                    <th>Opening Year</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="shop : ${shops}">
+                    <td th:text="${shop.id}"></td>
+                    <td th:text="${shop.shopName}"></td>
+                    <td th:text="${shop.city.cityName}"></td>
+                    <td th:text="${shop.address}"></td>
+                    <td th:text="${shop.openingYear}"></td>
+                    <td>
+                        <a th:href="@{/shops/edit/{id}(id=${shop.id})}" class="button edit">Edit</a>
+                        <a th:href="@{/shops/delete/{id}(id=${shop.id})}" class="button delete">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="/shops/add" class="button">Add Shop</a>
+        <a href="/home" class="button back">Back to Home</a>
+    </div>
+</body>
+</html>
