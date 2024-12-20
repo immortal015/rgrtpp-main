@@ -65,7 +65,7 @@ h1, h2, h3 {
 
 .form-container input,
 .form-container select {
-	width: 100%;
+	width: 87%;
 	padding: 14px 16px;
 	margin-bottom: 25px;
 	border: 1px solid #b0c4de;
@@ -174,7 +174,9 @@ table tr:hover {
 	border-color: #3498db; /* Додаємо кольорову рамку */
 	text-decoration: underline; /* Підкреслення */
 }
-
+.button-group {
+display: grid;
+}
 .button.edit {
 	background: #ffc107;
 }
@@ -190,4 +192,25 @@ table tr:hover {
 	font-weight: bold;
 	text-align: center;
 	margin-top: 20px;
+}
+
+.links {
+	text-align: center; /* Центрування тексту */
+	margin-top: 20px; /* Відступ зверху */
+	font-size: 1rem; /* Розмір тексту */
+
+}
+
+.links a {
+	color: #4a267c; /* Колір тексту */
+	text-decoration: none; /* Забираємо підкреслення */
+	font-weight: 500; /* Напівжирний шрифт */
+	font-size: 1.1rem;
+  font-weight: 600;
+	transition: color 0.3s ease, text-decoration 0.3s ease; /* Анімація при наведенні */
+}
+
+.links a:hover {
+	color: #12dabf; /* Колір при наведенні */
+	text-decoration: underline; /* Підкреслення при наведенні */
 }

@@ -1,4 +1,4 @@
-package com.tpp.tpplab3.models;
+package com.tpp.rgrtpp.models;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;

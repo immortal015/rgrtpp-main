@@ -1,10 +1,10 @@
-package com.tpp.tpplab3.repository;
+package com.tpp.rgrtpp.repository;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.tpp.tpplab3.models.Shop;
+import com.tpp.rgrtpp.models.Shop;
 
 
 @Repository

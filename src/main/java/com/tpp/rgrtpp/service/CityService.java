@@ -1,7 +1,7 @@
-package com.tpp.tpplab3.service;
+package com.tpp.rgrtpp.service;
 
-import com.tpp.tpplab3.models.City;
-import com.tpp.tpplab3.repository.CityRepository;
+import com.tpp.rgrtpp.models.City;
+import com.tpp.rgrtpp.repository.CityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Sort;

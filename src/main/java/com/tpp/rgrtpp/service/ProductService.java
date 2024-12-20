@@ -1,7 +1,7 @@
-package com.tpp.tpplab3.service;
+package com.tpp.rgrtpp.service;
 
-import com.tpp.tpplab3.models.Product;
-import com.tpp.tpplab3.repository.ProductRepository;
+import com.tpp.rgrtpp.models.Product;
+import com.tpp.rgrtpp.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;

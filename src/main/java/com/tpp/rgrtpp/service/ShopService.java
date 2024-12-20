@@ -1,7 +1,7 @@
-package com.tpp.tpplab3.service;
+package com.tpp.rgrtpp.service;
 
-import com.tpp.tpplab3.models.Shop;
-import com.tpp.tpplab3.repository.ShopRepository;
+import com.tpp.rgrtpp.models.Shop;
+import com.tpp.rgrtpp.repository.ShopRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -38,9 +38,8 @@ public class ShopService {
         Shop existingShop = shopRepository.findById(updatedShop.getId())
                 .orElseThrow(() -> new IllegalArgumentException("Shop not found"));
 
-        // Оновлення властивостей магазину
         existingShop.setShopName(updatedShop.getShopName());
-        existingShop.setCity(updatedShop.getCity());  // Передача міста, без перевірки на існування
+        existingShop.setCity(updatedShop.getCity());  
         existingShop.setAddress(updatedShop.getAddress());
         existingShop.setOpeningYear(updatedShop.getOpeningYear());
 
