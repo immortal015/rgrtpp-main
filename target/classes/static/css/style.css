@@ -1,0 +1,216 @@
+/* Загальні стилі */
+body {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	background: linear-gradient(135deg, #e0eafc, #cfdef3);
+	margin: 0;
+	padding: 0;
+	color: #2c3e50;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	text-rendering: optimizeLegibility;
+}
+.warning {
+	color: #d35400;
+	background-color: #fdf2e3;
+	border: 1px solid #f39c12;
+	padding: 15px;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	font-size: 1rem;
+}
+/* Контейнер */
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 50px;
+	background: #ffffff;
+	border-radius: 20px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.container:hover {
+	transform: scale(1.02);
+	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Заголовки */
+h1, h2, h3 {
+	color: #34495e;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+/* Стилі форм */
+.form-container {
+	background: linear-gradient(135deg, #f6f9fc, #dff1ff);
+	padding: 40px;
+	border-radius: 16px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-container label {
+	display: block;
+	font-size: 1.1rem;
+	font-weight: 600;
+	margin-bottom: 10px;
+	color: #2c3e50;
+}
+
+.form-container input,
+.form-container select {
+	width: 87%;
+	padding: 14px 16px;
+	margin-bottom: 25px;
+	border: 1px solid #b0c4de;
+	border-radius: 10px;
+	font-size: 1rem;
+	background: #f8f9fa;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+	border-color: #3498db;
+	box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+	outline: none;
+}
+
+.form-container button {
+	width: 100%;
+	padding: 15px;
+	font-size: 1.1rem;
+	font-weight: 700;
+	color: #fff;
+	background: linear-gradient(135deg, #3498db, #2c82c9);
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background 0.3s ease, transform 0.2s;
+}
+
+.form-container button:hover {
+	background: linear-gradient(135deg, #2c82c9, #1d6fa5);
+	transform: translateY(-3px);
+}
+
+/* Стилі таблиць */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 30px;
+	border-radius: 12px;
+	overflow: hidden;
+	background: #ffffff;
+}
+
+table th,
+table td {
+	padding: 20px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+	font-size: 1.1rem;
+}
+
+table th {
+	background: #2c82c9;
+	color: #fff;
+	font-weight: 700;
+}
+
+table tr:nth-child(even) {
+	background: #f2f4f8;
+}
+
+table tr:hover {
+	background: #ecf0f1;
+	transition: background 0.3s ease;
+}
+.actions {
+	display: flex;
+	gap: 10px; /* Відстань між кнопками */
+	justify-content: center; /* Вирівнювання по центру */
+}
+
+/* Кнопки */
+.button {
+	display: inline-block;
+	background: linear-gradient(135deg, #2c82c9, #3498db);
+	color: #fff;
+	padding: 15px 40px;
+	margin-top: 10px;
+	border: 2px solid transparent;
+	border-radius: 10px;
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: 700;
+	transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.button:hover {
+	background: #fff; /* Світлий фон */
+	color: #3498db; /* Зміна кольору тексту */
+	border-color: #3498db; /* Додаємо кольорову рамку */
+	text-decoration: underline; /* Підкреслення */
+}
+
+.button.edit:hover {
+	background: #fff; /* Світлий фон */
+	color: #3498db; /* Зміна кольору тексту */
+	border-color: #3498db; /* Додаємо кольорову рамку */
+	text-decoration: underline; /* Підкреслення */
+}
+
+.button.delete:hover {
+	background: #fff; /* Світлий фон */
+	color: #3498db; /* Зміна кольору тексту */
+	border-color: #3498db; /* Додаємо кольорову рамку */
+	text-decoration: underline; /* Підкреслення */
+}
+.button-group {
+display: grid;
+}
+.button.edit {
+	background: #ffc107;
+}
+
+.button.delete {
+	background: #dc3545;
+}
+
+/* Помилки */
+.error {
+	color: #e74c3c;
+	font-size: 1rem;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.links {
+	text-align: center; /* Центрування тексту */
+	margin-top: 20px; /* Відступ зверху */
+	font-size: 1rem; /* Розмір тексту */
+
+}
+
+.links a {
+	color: #4a267c; /* Колір тексту */
+	text-decoration: none; /* Забираємо підкреслення */
+	font-weight: 500; /* Напівжирний шрифт */
+	font-size: 1.1rem;
+  font-weight: 600;
+	transition: color 0.3s ease, text-decoration 0.3s ease; /* Анімація при наведенні */
+}
+
+.links a:hover {
+	color: #12dabf; /* Колір при наведенні */
+	text-decoration: underline; /* Підкреслення при наведенні */
+}
