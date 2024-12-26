@@ -3,5 +3,5 @@
 .classpath 
 .settings
 .metadata
-.vscode
+*.vscode
 target
