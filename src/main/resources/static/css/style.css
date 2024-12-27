@@ -1,4 +1,3 @@
-/* Загальні стилі */
 body {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
@@ -21,9 +20,8 @@ body {
 	margin-bottom: 20px;
 	font-size: 1rem;
 }
-/* Контейнер */
-.container {
-	max-width: 800px;
+
+.container {	
 	margin: 0 auto;
 	padding: 50px;
 	background: #ffffff;
@@ -100,7 +98,7 @@ h1, h2, h3 {
 	transform: translateY(-3px);
 }
 
-/* Стилі таблиць */
+
 table {
 	width: 100%;
 	border-collapse: collapse;
@@ -134,11 +132,11 @@ table tr:hover {
 }
 .actions {
 	display: flex;
-	gap: 10px; /* Відстань між кнопками */
-	justify-content: center; /* Вирівнювання по центру */
+	gap: 10px; 
+	justify-content: center; 
 }
 
-/* Кнопки */
+
 .button {
 	display: inline-block;
 	background: linear-gradient(135deg, #2c82c9, #3498db);
@@ -155,24 +153,24 @@ table tr:hover {
 }
 
 .button:hover {
-	background: #fff; /* Світлий фон */
-	color: #3498db; /* Зміна кольору тексту */
-	border-color: #3498db; /* Додаємо кольорову рамку */
-	text-decoration: underline; /* Підкреслення */
+	background: #fff; 
+	color: #3498db; 
+	border-color: #3498db; 
+	text-decoration: underline;
 }
 
 .button.edit:hover {
-	background: #fff; /* Світлий фон */
-	color: #3498db; /* Зміна кольору тексту */
-	border-color: #3498db; /* Додаємо кольорову рамку */
-	text-decoration: underline; /* Підкреслення */
+	background: #fff;
+	color: #3498db; 
+	border-color: #3498db; 
+	text-decoration: underline; 
 }
 
 .button.delete:hover {
-	background: #fff; /* Світлий фон */
-	color: #3498db; /* Зміна кольору тексту */
-	border-color: #3498db; /* Додаємо кольорову рамку */
-	text-decoration: underline; /* Підкреслення */
+	background: #fff; 
+	color: #3498db; 
+	border-color: #3498db; 
+	text-decoration: underline; 
 }
 .button-group {
 display: grid;
@@ -195,22 +193,22 @@ display: grid;
 }
 
 .links {
-	text-align: center; /* Центрування тексту */
-	margin-top: 20px; /* Відступ зверху */
-	font-size: 1rem; /* Розмір тексту */
+	text-align: center;
+	margin-top: 20px;
+	font-size: 1rem; 
 
 }
 
 .links a {
-	color: #4a267c; /* Колір тексту */
-	text-decoration: none; /* Забираємо підкреслення */
-	font-weight: 500; /* Напівжирний шрифт */
+	color: #4a267c; 
+	text-decoration: none; 
+	font-weight: 500; 
 	font-size: 1.1rem;
   font-weight: 600;
-	transition: color 0.3s ease, text-decoration 0.3s ease; /* Анімація при наведенні */
+	transition: color 0.3s ease, text-decoration 0.3s ease; 
 }
 
 .links a:hover {
-	color: #12dabf; /* Колір при наведенні */
-	text-decoration: underline; /* Підкреслення при наведенні */
+	color: #12dabf; 
+	text-decoration: underline; 
 }
