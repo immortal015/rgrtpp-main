@@ -1,7 +1,3 @@
-.DS_Store 
-.project 
-.classpath 
-.settings
-.metadata
-.vscode
-target
+/.vscode
+/.mvn
+/target
